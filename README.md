@@ -14,5 +14,5 @@ Capsule Networks for improving protein secondary structure prediction accuracy
 Improving protein secondary structure prediction accuracy
 
 <div align="center">
-  <img src="images/1jia.pdb", width="400px">
+  <img src="images/pymol.png", width="400px">
 </div>
