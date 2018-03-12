@@ -13,3 +13,6 @@ Capsule Networks for improving protein secondary structure prediction accuracy
 
 Improving protein secondary structure prediction accuracy
 
+<div align="center">
+  <img src="images/1jia.jpg", width="400px">
+</div>
