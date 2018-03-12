@@ -11,6 +11,12 @@ Capsule Networks for improving protein secondary structure prediction accuracy
 
 ## Goal
 
-Improving protein secondary structure prediction accuracy
+## Background
+
+### Secondary structure prediction
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/pymol.png)
+
+### Capsule networks
+
+Improving protein secondary structure prediction accuracy
 
