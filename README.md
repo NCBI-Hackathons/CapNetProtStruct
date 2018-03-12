@@ -3,11 +3,14 @@ Capsule Networks for improving protein secondary structure prediction accuracy
 
 ## Team members
 
+- Jia Wen (Lead)
+- Jing Chen
+- Clark Huang
 - Maoxuan Lin
 - Yangqi Su
-- Clark Huang
-- Jing Chen
-- Jia Wen
+
+
+
 
 
 ## Background
