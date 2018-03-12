@@ -24,7 +24,7 @@ Here, we are trying to use capsule networks to do the protein seconary structure
 ## Workflow
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/workflow.png)
 <br />
-Just like other neural networks program, the workflow is simple: training the program and then testing the program. Idealy, for the user, they can just input the protein sequence and then, they can get the predicted secondary structure type for each amino acid in the protein sequence. 
+Just like other neural networks program, the workflow is simple: training the program and then testing the program. Idealy, for the user, they can just input the protein sequence and then, they can get the predicted secondary structure type for each amino acid in the protein sequence. Inside our program, we do pre-proccesing input data, which is to generate the format that can be used in capsule networks, run capsule networks, and post-processing output data to get the read-friendly output format. 
 
 ## Method and Data
 
