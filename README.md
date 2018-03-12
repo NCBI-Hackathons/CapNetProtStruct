@@ -13,4 +13,4 @@ Capsule Networks for improving protein secondary structure prediction accuracy
 
 Improving protein secondary structure prediction accuracy
 
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/pymol.png)
