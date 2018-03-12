@@ -9,7 +9,6 @@ Capsule Networks for improving protein secondary structure prediction accuracy
 - Jing Chen
 - Jia Wen
 
-## Goal
 
 ## Background
 
@@ -18,5 +17,14 @@ Capsule Networks for improving protein secondary structure prediction accuracy
 
 ### Capsule networks
 
-Improving protein secondary structure prediction accuracy
+## Goal
+
+To imporve protein secondary structure prediction accuracy. (Now: best accuracy: ~84%)
+
+## Workflow
+
+## Method and Data
+
+## Result
+
 
