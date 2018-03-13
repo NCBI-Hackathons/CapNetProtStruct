@@ -19,7 +19,8 @@ Protein secondary structure is the first step towards prediction of protein tert
 ### Capsule networks
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/CapsNet.png)
 <br />
-
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Intput_Y.png)
+<br />
 Capsule networks is a kind of new neural networks, which could improve the shortage of convolutional neural networks - orientation problem.
 ## Goal
 
@@ -40,8 +41,7 @@ The original training data set is from CullPDB with 5600 PDB files. The PDB form
 After pre-processing, the X value and Y value will look like this: 
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Input.png)
 <br />
-![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Intput_Y.png)
-<br />
+
 ### Capsule networks
 The original Capsule networks code is from https://github.com/XifengGuo/CapsNet-Keras, which is a Keras implementation of CapsNet in the paper:
 Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017
