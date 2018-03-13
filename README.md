@@ -54,3 +54,4 @@ python capsulenet.py input sequence.txt
 ```
 
 ## Reference
+[1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in Neural Information Processing Systems. 2017.
