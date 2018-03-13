@@ -19,7 +19,7 @@ Protein secondary structure is the first step towards prediction of protein tert
 ### Capsule networks
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/CapsNet.png)
 <br />
-![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Intput_Y.png)
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Capnetssss.png)
 <br />
 Capsule networks is a kind of new neural networks, which could improve the shortage of convolutional neural networks - orientation problem.
 ## Goal
@@ -32,8 +32,7 @@ Here, we are trying to use capsule networks to do the protein secondary structur
 Just like other neural networks program, the workflow is simple: training the program and then testing the program. Ideally, for the user, they can just input the protein sequence and then, they can get the predicted secondary structure type for each amino acid in the protein sequence. Inside our program, we do pre-processing input data, which is to generate the format that can be used in capsule networks, run capsule networks, and post-processing output data to get the read-friendly output format.  
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/workflow_2.png)
 <br />
-![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Capnetssss.png)
-<br />
+
 ## Method and Data
 
 ### Training data
@@ -41,7 +40,8 @@ The original training data set is from CullPDB with 5600 PDB files. The PDB form
 After pre-processing, the X value and Y value will look like this: 
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Input.png)
 <br />
-
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Intput_Y.png)
+<br />
 ### Capsule networks
 The original Capsule networks code is from https://github.com/XifengGuo/CapsNet-Keras, which is a Keras implementation of CapsNet in the paper:
 Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017
