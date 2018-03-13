@@ -28,6 +28,9 @@ Just like other neural networks program, the workflow is simple: training the pr
 
 ## Method and Data
 
+### Training data
+### Testing data
+
 ## Result
 
 
