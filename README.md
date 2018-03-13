@@ -36,7 +36,7 @@ Just like other neural networks program, the workflow is simple: training the pr
 ## Method and Data
 
 ### Training data
-The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure. The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model.  <br />
+The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure.[3] The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model.  <br />
 After pre-processing, the X value and Y value will look like this: 
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Input.png)
 <br />
@@ -63,3 +63,4 @@ python capsulenet.py sequence.txt
 ## Reference
 [1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in Neural Information Processing Systems. 2017.<br />
 [2]  https://github.com/XifengGuo/CapsNet-Keras
+[3] Zhou, Jian, and Olga Troyanskaya. "Deep supervised and convolutional generative stochastic network for protein secondary structure prediction." International Conference on Machine Learning. 2014.
