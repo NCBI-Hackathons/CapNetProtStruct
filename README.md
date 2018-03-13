@@ -26,10 +26,12 @@ Capsule networks is a kind of new neural networks, which could improve the short
 Here, we are trying to use capsule networks to do the protein secondary structure prediction to see if we can improve protein secondary structure prediction accuracy. (Highest accuracy now: ~84%)
 
 ## Workflow
-![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/workflow.png)
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/flowchart.png)
 <br />
 Just like other neural networks program, the workflow is simple: training the program and then testing the program. Ideally, for the user, they can just input the protein sequence and then, they can get the predicted secondary structure type for each amino acid in the protein sequence. Inside our program, we do pre-processing input data, which is to generate the format that can be used in capsule networks, run capsule networks, and post-processing output data to get the read-friendly output format.  
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/workflow_2.png)
+<br />
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Capnetssss.png)
 <br />
 ## Method and Data
 
