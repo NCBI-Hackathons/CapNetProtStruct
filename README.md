@@ -62,5 +62,5 @@ python capsulenet.py sequence.txt
 
 ## Reference
 [1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in Neural Information Processing Systems. 2017.<br />
-[2]  https://github.com/XifengGuo/CapsNet-Keras
+[2]  https://github.com/XifengGuo/CapsNet-Keras <br />
 [3] Zhou, Jian, and Olga Troyanskaya. "Deep supervised and convolutional generative stochastic network for protein secondary structure prediction." International Conference on Machine Learning. 2014.
