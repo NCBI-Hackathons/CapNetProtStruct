@@ -50,7 +50,7 @@ Install Keras>=2.0.7 with TensorFlow>=1.2 backend.
 
 ### Usage
 ```
-python capsulenet.py input sequence.txt
+python capsulenet.py sequence.txt
 ```
 
 ## Reference
