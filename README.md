@@ -17,6 +17,9 @@ Capsule Networks for improving protein secondary structure prediction accuracy
 <br />
 Protein secondary structure is the first step towards prediction of protein tertiary structure, which is essential in protein structure and function. There are mainly three types of secondary structures: α-helix, β-strand, and coil.  
 ### Capsule networks
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/CapsNet.png)
+<br />
+
 Capsule networks is a kind of new neural networks, which could improve the shortage of convolutional neural networks - orientation problem.
 ## Goal
 
