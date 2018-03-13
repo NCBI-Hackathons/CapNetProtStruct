@@ -44,7 +44,7 @@ There are two sets of testing data: 514 pdb files from Cb513 and 272 pdb files f
 ### Validation data
 There are 256 pdb files from CullPDB we can use to validate our Capsule networks. 
 ## Usage
-Usage is modified from the original Capsule networks code.[1]
+Usage is modified from the original Capsule networks code.[2]
 ### Requirement
 Install Keras>=2.0.7 with TensorFlow>=1.2 backend.
 
@@ -55,3 +55,4 @@ python capsulenet.py sequence.txt
 
 ## Reference
 [1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in Neural Information Processing Systems. 2017.
+[2]  https://github.com/XifengGuo/CapsNet-Keras
