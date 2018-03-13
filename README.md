@@ -31,6 +31,10 @@ Just like other neural networks program, the workflow is simple: training the pr
 ### Training data
 The original training data set is from pdb. The pdb format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of pdb files were selected by Olga Troyanskaya's lab in Princeton University - the data set were used in training their Supervised Convolutional GSN model for protein secondary structure. The similarity between any two protain sequence from the data set is less than 30%, which is a good property for training the protain structure prediction model. <br />
 For pre-processing, the X value and Y value will look like this: 
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Intput.png)
+<br />
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Intput_Y.png)
+<br />
 
 ### Testing data
 
