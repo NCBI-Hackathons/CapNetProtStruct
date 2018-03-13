@@ -1,4 +1,6 @@
 # CNPSP
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/CNPSP.png)
+<br />
 
 Capsule Networks for improving protein secondary structure prediction accuracy
 
