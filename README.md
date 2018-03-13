@@ -29,7 +29,8 @@ Just like other neural networks program, the workflow is simple: training the pr
 ## Method and Data
 
 ### Training data
-The original training data set is from pdb. The pdb format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of pdb files were selected by Olga Troyanskaya's lab in Princeton University - the data set were used in training their Supervised Convolutional GSN model for protein secondary structure. 
+The original training data set is from pdb. The pdb format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of pdb files were selected by Olga Troyanskaya's lab in Princeton University - the data set were used in training their Supervised Convolutional GSN model for protein secondary structure. WHY THE DATA SET IS GOOD. <br />
+For pre-processing, the X value of the training data is reshaped into a N*(20+1) matrix - N is the length of the protein sequence, 20 represents the number of total amino acids and 1 is a vector.  
 ### Testing data
 
 ## Result
