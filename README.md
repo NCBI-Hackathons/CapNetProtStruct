@@ -60,7 +60,7 @@ The protein secondry structure datasets are collected from Protein Data Bank(PDB
 ### Training data
 - CNPSP: The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure.[3] The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model. 
 
-The CullPDB dataset was constructed before CASP10 (i.e., May 2012), in which any two proteins in this set share around 20% sequence identity with each other(http://www.princeton.edu/~jzthree/datasets/ICML2014/). CB513 dataset contains 513 non-redauntant sequences which can be used to test protein secondary structure methods.Both CullPDB and CB513 can used as be benchmark datasets.
+The CullPDB dataset was constructed before CASP10 (i.e., May 2012), in which any two proteins in this set share around 20% sequence identity with each other(http://www.princeton.edu/~jzthree/datasets/ICML2014/). CB513 dataset contains 513 non-redauntant sequences which can be used to test protein secondary structure methods.Both CullPDB and CB513 can be used as benchmark datasets.
 
 - CNPDP: We generate the training data set malually from Pymol. We generated 32 protein structure images with labels as training data set. The label information is from CATH. 
 
