@@ -88,7 +88,7 @@ Just like other neural networks program, the workflow is simple: training the pr
 <br />
 
 ## Method and Data
-The protein secondry structure datasets are collected from Protein Data Bank(PDB, https://www.rcsb.org/) which is established since 1970's. The PDB provides s standard representation of molecular structure datasets which are derived from X-ray crystallography, NMR spectroscopy, and increasingly, cryo-electron microscopy,which are sumbitted by scientists around the world.
+The protein datasets are collected from Protein Data Bank(PDB, https://www.rcsb.org/) which is established since 1970's. The PDB provides s standard representation of molecular structure datasets which are derived from X-ray crystallography, NMR spectroscopy, and increasingly, cryo-electron microscopy,which are sumbitted by scientists around the world.
 ### Training data
 - CNPSP: The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure.[3] The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model. The CullPDB dataset was constructed before CASP10 (i.e., May 2012), in which any two proteins in this set share around 20% sequence identity with each other(http://www.princeton.edu/~jzthree/datasets/ICML2014/). CB513 dataset contains 513 non-redauntant sequences which can be used to test protein secondary structure methods.Both CullPDB and CB513 can be used as benchmark datasets.
 
@@ -98,7 +98,7 @@ The protein secondry structure datasets are collected from Protein Data Bank(PDB
 ### Capsule networks
 The original Capsule networks code is from https://github.com/XifengGuo/CapsNet-Keras, which is a Keras implementation of CapsNet in the paper:
 Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017
-We modified the code to do the protein secondary structure prediction. 
+We modified the code to do the protein secondary structure prediction and domain number prediction. 
 ### Testing data
 - CNPSP: There are two sets of testing data: 513 PDB files from Cb513 and 272 PDB files from CullPDB. All PDB files were pre-proceed into the data format as training data. 
 - CNPDP: The testing data set is manually generated. We test oue model using 2 labeled images.  
