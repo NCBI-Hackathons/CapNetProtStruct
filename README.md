@@ -125,5 +125,5 @@ We modified the code to do the protein secondary structure prediction and domain
 [3] Zhou J., and Olga T. "Deep supervised and convolutional generative stochastic network for protein secondary structure prediction." International Conference on Machine Learning. 2014. <br />
 [4] Protein Data Bank, https://en.wikipedia.org/wiki/Protein_Data_Bank.<br />
 [5] Wetlaufer Donald B. "Nucleation, rapid folding, and globular intrachain regions in proteins." Proceedings of the National Academy of Sciences70(3): 697-701, 1973.<br />
-[6] Swindells, Mark B. "A procedure for detecting structural domains in proteins." Protein Science, 4(1):103-112, 1995.
+[6] Swindells, Mark B. "A procedure for detecting structural domains in proteins." Protein Science, 4(1):103-112, 1995.<br />
 [7] Orengo, Christine A., et al. "CATH–a hierarchic classification of protein domain structures." Structure 5.8:1093-1109, 1997.
