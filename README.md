@@ -47,9 +47,11 @@ Just like other neural networks program, the workflow is simple: training the pr
 - CNPSP : Ideally, for the user, they can just input the protein sequence and then, they can get the predicted secondary structure type for each amino acid in the protein sequence. Inside our program, we do pre-processing input data, which is to generate the format that can be used in capsule networks, run capsule networks, and post-processing output data to get the read-friendly output format.  
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/workflow_3.png)
 <br />
+
 - CNPDP : User can use protein structure image as input. Inside our program, we parsed the image files and trained the model. The output daata will be the predicted number of domains for the protein chain. 
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/PDP.png)
 <br />
+
 - CNPDP 2.0 : User can use protein chain PDB ID as input. Inside our program, we searched the PDB ID from database, get the atom coordinates information and use these information generate input matrix. Finally, they can also get the predicted number of domains for the protein chain. 
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/PDP2.png)
 <br />
