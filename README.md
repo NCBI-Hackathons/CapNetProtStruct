@@ -28,7 +28,7 @@ Put the sequence you want to do the secondary structure prediction in sequences.
  <br />
 The expected output would be "----------EEEEEEE-----HHHHHHHHHHHHH---EEEEEE----EEEEE-------",which is the secondary structure type for each residue in the sequence.txt file.
 
-### CNPSP
+### CNPDP
 #### Usage
 ```
 download CNPDP
@@ -39,7 +39,7 @@ Save the protein structure image you would like to do the domain number predicti
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/domain/pymol/1_1.png)
 <br />
 The expected output would be "1", which means only one domain is predicted in the image.
-### CNPSP
+### CNPDP 2.0
 #### Usage
 ```
 download CNPDP2
@@ -94,7 +94,7 @@ The protein datasets are collected from Protein Data Bank(PDB, https://www.rcsb.
 
 - CNPDP: We generate the training data set malually from Pymol. We generated 32 protein structure images with labels as training data set. The label information is from CATH. CATH can help group protein domains based on their folding patterns, the domains prediction ar downloaded from Protein Data Bank. It includes four levels of classes that ar chlassification,architecture (A), topology (T) and homologous superfamily (H)[7].
 
-- CNPDP 2.0: We get the atom coordinates from PDB file for each protein chain, training the model using xxx protein chain information with labels. The label information is from CATH. 
+- CNPDP 2.0: We get the atom coordinates from PDB file for each protein chain, training the model using 500 protein chain information with labels. The label information is from CATH. 
 ### Capsule networks
 The original Capsule networks code is from https://github.com/XifengGuo/CapsNet-Keras, which is a Keras implementation of CapsNet in the paper:
 Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017
@@ -102,7 +102,7 @@ We modified the code to do the protein secondary structure prediction and domain
 ### Testing data
 - CNPSP: There are two sets of testing data: 513 PDB files from Cb513 and 272 PDB files from CullPDB. All PDB files were pre-proceed into the data format as training data. 
 - CNPDP: The testing data set is manually generated. We test oue model using 2 labeled images.  
-- CNPDP 2.0: The testing data set is manually generated. We test oue model using yyy labeled images. 
+- CNPDP 2.0: The testing data set is manually generated. We test oue model using 50 labeled files. 
 ### Validation data
 - CNPSP: There are 256 PDB files from CullPDB we can use to validate our Capsule networks. 
 
