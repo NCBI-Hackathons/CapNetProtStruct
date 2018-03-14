@@ -1,4 +1,4 @@
-# CNPSP
+# CNPSP, CNPDP and CNPDP 2.0
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/CNPSP.png)
 <br />
 
@@ -39,7 +39,7 @@ Just like other neural networks program, the workflow is simple: training the pr
 <br />
 
 ## Method and Data
-
+The protein secondry structure datasets are collected from Protein Data Bank(PDB, https://www.rcsb.org/) which is established since 1970's. The PDB provides s standard representation of molecular structure datasets which are derived from X-ray crystallography, NMR spectroscopy, and increasingly, cryo-electron microscopy,which are sumbitted by scientists around the world.
 ### Training data
 The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure.[3] The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model.  <br />
 After pre-processing, the X value and Y value will look like this: 
@@ -61,11 +61,17 @@ Usage is modified from the original Capsule networks code.[2]
 Install Keras>=2.0.7 with TensorFlow>=1.2 backend.
 
 ### Usage
+The sequences.txt includes sequence such as "MQVWPIEGIKKFETLSYLPPLTVEDLLKQIEYLLRSKWVPCLEFSKVGFVYRENHRSPGY...". 
+
 ```
 python capsulenet.py sequence.txt
 ```
 
+The expected output would be "----------EEEEEEE-----HHHHHHHHHHHHH---EEEEEE----EEEEE-------"
+
+
 ## Reference
 [1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in Neural Information Processing Systems. 2017.<br />
-[2]  https://github.com/XifengGuo/CapsNet-Keras <br />
-[3] Zhou, Jian, and Olga Troyanskaya. "Deep supervised and convolutional generative stochastic network for protein secondary structure prediction." International Conference on Machine Learning. 2014.
+[2] Keas, https://github.com/XifengGuo/CapsNet-Keras. <br />
+[3] Zhou, Jian, and Olga Troyanskaya. "Deep supervised and convolutional generative stochastic network for protein secondary structure prediction." International Conference on Machine Learning. 2014. <br />
+[4] Protein Data Bank, https://en.wikipedia.org/wiki/Protein_Data_Bank.
