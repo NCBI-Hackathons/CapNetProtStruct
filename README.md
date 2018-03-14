@@ -50,7 +50,6 @@ Just like other neural networks program, the workflow is simple: training the pr
 - CNPDP : User can use protein structure image as input. Inside our program, we parsed the image files and trained the model. The output daata will be the predicted number of domains for the protein chain. 
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/PDP.png)
 <br />
-
 - CNPDP 2.0 : User can use protein chain PDB ID as input. Inside our program, we searched the PDB ID from database, get the atom coordinates information and use these information generate input matrix. Finally, they can also get the predicted number of domains for the protein chain. 
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/PDP2.png)
 <br />
