@@ -1,8 +1,10 @@
 # CNPSP, CNPDP and CNPDP 2.0
-![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/CNPSP.png)
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/logo_2.png)
 <br />
 
-Capsule Networks for improving protein secondary structure prediction accuracy
+- Capsule Networks for improving protein secondary structure prediction accuracy
+- Capsule Networks for protein chain domain number prediction based on protein structure image
+- Capsule Networks for protein chain domain number prediction based on amino acid coordinates
 
 ## Team members
 
@@ -16,20 +18,27 @@ Capsule Networks for improving protein secondary structure prediction accuracy
 
 ## Background
 
-### Secondary structure prediction
-
-![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/pymol_2.png)
-<br />
-Protein secondary structure is the first step towards prediction of protein tertiary structure, which is essential in protein structure and function. There are mainly three types of secondary structures: α-helix, β-strand, and coil.  
 ### Capsule networks
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/CapsNet.png)
 <br />
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Capnetssss.png)
 <br />
 Capsule networks is a kind of new neural networks, which could improve the shortage of convolutional neural networks - orientation problem.
+### Secondary structure prediction
+
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/pymol_2.png)
+<br />
+Protein secondary structure is the first step towards prediction of protein tertiary structure, which is essential in protein structure and function. There are mainly three types of secondary structures: α-helix, β-strand, and coil.  
+### Domain partition
+
+Protein Domain is generally considered as a compact, semi-indipendent units with identifiable hydrophobic core. The intersections between domains are weak.[5,6] It is important in protein structure and function assignment and prediction. Domain identification is still a big problem. The two most important points in domain identification are the number of domains and the boundary of domains.  
+
 ## Goal
 
-Here, we are trying to use capsule networks to do the protein secondary structure prediction to see if we can improve protein secondary structure prediction accuracy. (Highest accuracy now: ~84%)
+Here, we are trying to use capsule networks to:
+- do the protein secondary structure prediction to see if we can improve protein secondary structure prediction accuracy. (Highest accuracy now: ~84%)
+- do protein chain domain number prediction based on protein structure image.
+- protein chain domain number prediction based on amino acid coordinates. 
 
 ## Workflow
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/flowchart.png)
@@ -74,4 +83,6 @@ The expected output would be "----------EEEEEEE-----HHHHHHHHHHHHH---EEEEEE----EE
 [1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in Neural Information Processing Systems. 2017.<br />
 [2] Keas, https://github.com/XifengGuo/CapsNet-Keras. <br />
 [3] Zhou, Jian, and Olga Troyanskaya. "Deep supervised and convolutional generative stochastic network for protein secondary structure prediction." International Conference on Machine Learning. 2014. <br />
-[4] Protein Data Bank, https://en.wikipedia.org/wiki/Protein_Data_Bank.
+[4] Protein Data Bank, https://en.wikipedia.org/wiki/Protein_Data_Bank.<br />
+[5] Wetlaufer, Donald B. "Nucleation, rapid folding, and globular intrachain regions in proteins." Proceedings of the National Academy of Sciences70, no. 3 (1973): 697-701.<br />
+[6] Swindells, Mark B. "A procedure for detecting structural domains in proteins." Protein Science 4, no. 1 (1995): 103-112.
