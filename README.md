@@ -43,46 +43,70 @@ Here, we are trying to use capsule networks to:
 ## Workflow
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/flowchart.png)
 <br />
-Just like other neural networks program, the workflow is simple: training the program and then testing the program. Ideally, for the user, they can just input the protein sequence and then, they can get the predicted secondary structure type for each amino acid in the protein sequence. Inside our program, we do pre-processing input data, which is to generate the format that can be used in capsule networks, run capsule networks, and post-processing output data to get the read-friendly output format.  
+Just like other neural networks program, the workflow is simple: training the program and then testing the program. 
+- CNPSP : Ideally, for the user, they can just input the protein sequence and then, they can get the predicted secondary structure type for each amino acid in the protein sequence. Inside our program, we do pre-processing input data, which is to generate the format that can be used in capsule networks, run capsule networks, and post-processing output data to get the read-friendly output format.  
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/workflow_3.png)
 <br />
+- CNPDP : User can use protein structure image as input. Inside our program, we parsed the image files and trained the model. The output daata will be the predicted number of domains for the protein chain. 
+*** workflow
+- CNPDP 2.0 : User can use protein chain PDB ID as input. Inside our program, we searched the PDB ID from database, get the atom coordinates information and use these information generate input matrix. Finally, they can also get the predicted number of domains for the protein chain. 
+*** workflow
 
 ## Method and Data
 The protein secondry structure datasets are collected from Protein Data Bank(PDB, https://www.rcsb.org/) which is established since 1970's. The PDB provides s standard representation of molecular structure datasets which are derived from X-ray crystallography, NMR spectroscopy, and increasingly, cryo-electron microscopy,which are sumbitted by scientists around the world.
 ### Training data
-The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure.[3] The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model.  <br />
-After pre-processing, the X value and Y value will look like this: 
-![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Input.png)
-<br />
-![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Intput_Y.png)
-<br />
+- CNPSP: The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure.[3] The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model.  <br />
+- CNPDP: We generate the training data set malually from Pymol. We generated 32 protein structure images with labels as training data set. The label information is from CATH. 
+- CNPDP 2.0: We get the atom coordinates from PDB file for each protein chain, training the model using xxx protein chain information with labels. The label information is from CATH. 
 ### Capsule networks
 The original Capsule networks code is from https://github.com/XifengGuo/CapsNet-Keras, which is a Keras implementation of CapsNet in the paper:
 Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017
 We modified the code to do the protein secondary structure prediction. 
 ### Testing data
-There are two sets of testing data: 514 PDB files from Cb513 and 272 PDB files from CullPDB. All PDB files were pre-proceed into the data format as training data. 
+- CNPSP: There are two sets of testing data: 514 PDB files from Cb513 and 272 PDB files from CullPDB. All PDB files were pre-proceed into the data format as training data. 
+- CNPDP: The testing data set is manually generated. We test oue model using 2 labeled images.  
+- CNPDP 2.0: The testing data set is manually generated. We test oue model using yyy labeled images. 
 ### Validation data
-There are 256 PDB files from CullPDB we can use to validate our Capsule networks. 
+- CNPSP: There are 256 PDB files from CullPDB we can use to validate our Capsule networks. 
 ## Usage
-Usage is modified from the original Capsule networks code.[2]
+Usage is modified from the original Capsule networks code [2].
+
 ### Requirement
 Install Keras>=2.0.7 with TensorFlow>=1.2 backend.
 
-### Usage
-The sequences.txt includes sequence such as "MQVWPIEGIKKFETLSYLPPLTVEDLLKQIEYLLRSKWVPCLEFSKVGFVYRENHRSPGY...". 
+### CNPSP
+#### Example
 
 ```
-python capsulenet.py sequence.txt
+python capsulenet_CNPSP.py sequence.txt
 ```
+The sequences.txt includes sequence like "MQVWPIEGIKKFETLSYLPPLTVEDLLKQIEYLLRSKWVPCLEFSKVGFVYRENHRSPGY...".
+ <br />
+The expected output would be "----------EEEEEEE-----HHHHHHHHHHHHH---EEEEEE----EEEEE-------".
+### CNPSP
+#### Example
+```
+python capsulenet_CNPDP.py image.png
+```
+The image.png can be any protein structure image generated by Pymol like: 
+image
+<br />
+The expected output would be "5".
+### CNPSP
+```
+python capsulenet_CNPDP2.py protein_chain_PDB_ID
+```
+The protein_chain_PDB_ID can be any protain chain PDB ID like: 
+1CHJ.
+<br />
+The expected output would be "5".
 
-The expected output would be "----------EEEEEEE-----HHHHHHHHHHHHH---EEEEEE----EEEEE-------"
-
+#### Example
 
 ## Reference
 [1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in Neural Information Processing Systems. 2017.<br />
 [2] Keas, https://github.com/XifengGuo/CapsNet-Keras. <br />
 [3] Zhou, Jian, and Olga Troyanskaya. "Deep supervised and convolutional generative stochastic network for protein secondary structure prediction." International Conference on Machine Learning. 2014. <br />
 [4] Protein Data Bank, https://en.wikipedia.org/wiki/Protein_Data_Bank.<br />
-[5] Wetlaufer, Donald B. "Nucleation, rapid folding, and globular intrachain regions in proteins." Proceedings of the National Academy of Sciences70, no. 3 (1973): 697-701.<br />
-[6] Swindells, Mark B. "A procedure for detecting structural domains in proteins." Protein Science 4, no. 1 (1995): 103-112.
+[5] Wetlaufer, Donald B. "Nucleation, rapid folding, and globular intrachain regions in proteins." Proceedings of the National Academy of Sciences70(3): 697-701, 1973.<br />
+[6] Swindells, Mark B. "A procedure for detecting structural domains in proteins." Protein Science, 4(1):103-112, 1995.
