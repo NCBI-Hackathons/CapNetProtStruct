@@ -46,7 +46,7 @@ download CNPDP2
 cd CNPDP2
 python capsulenet_CNPDP2.py protein_chain_PDB_ID
 ```
-Put the protein chain PDB ID you would like to do the domain number prediction on argument like 1CHJA:
+Put the protein chain PDB ID you would like to do the domain number prediction on argument like 1CHJA:<br />
 python capsulenet_CNPDP2.py 1CHJA
 <br />
 The expected output would be "1", which means one domain is predicted for protein 1CHJ chain A.
