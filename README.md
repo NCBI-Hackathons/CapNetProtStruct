@@ -106,6 +106,10 @@ We modified the code to do the protein secondary structure prediction and domain
 ### Validation data
 - CNPSP: There are 256 PDB files from CullPDB we can use to validate our Capsule networks. 
 
+## Amazing result!!!!!!!
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/result.png)
+<br />
+
 ## Team members
 
 - Jia Wen (Lead)
