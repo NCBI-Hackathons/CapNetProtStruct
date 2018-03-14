@@ -92,7 +92,7 @@ The protein datasets are collected from Protein Data Bank(PDB, https://www.rcsb.
 ### Training data
 - CNPSP: The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure.[3] The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model. The CullPDB dataset was constructed before CASP10 (i.e., May 2012), in which any two proteins in this set share around 20% sequence identity with each other(http://www.princeton.edu/~jzthree/datasets/ICML2014/). CB513 dataset contains 513 non-redauntant sequences which can be used to test protein secondary structure methods.Both CullPDB and CB513 can be used as benchmark datasets.
 
-- CNPDP: We generate the training data set malually from Pymol. We generated 32 protein structure images with labels as training data set. The label information is from CATH. CATH can help group protein domains based on their folding patterns, the domains prediction ar downloaded from Protein Data Bank. It includes four levels of classes that ar chlassification,architecture (A), topology (T) and homologous superfamily (H)[7].
+- CNPDP: We generate the training data set malually from Pymol. We generated 32 protein structure images with labels as training data set. The label information is from CATH. CATH can help group protein domains based on their folding patterns, the domains prediction ar downloaded from Protein Data Bank. It includes four levels of classes that are classification (C),architecture (A), topology (T) and homologous superfamily (H)[7].
 
 - CNPDP 2.0: We get the atom coordinates from PDB file for each protein chain, training the model using 500 protein chain information with labels. The label information is from CATH. 
 ### Capsule networks
@@ -116,10 +116,10 @@ We modified the code to do the protein secondary structure prediction and domain
 
 
 ## Reference
-[1] Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic routing between capsules." Advances in Neural Information Processing Systems. 2017.<br />
-[2] Keas, https://github.com/XifengGuo/CapsNet-Keras. <br />
-[3] Zhou, Jian, and Olga Troyanskaya. "Deep supervised and convolutional generative stochastic network for protein secondary structure prediction." International Conference on Machine Learning. 2014. <br />
+[1] Sabour S., Nicholas F., and Geoffrey E. H.. "Dynamic routing between capsules." Advances in Neural Information Processing Systems. 2017.<br />
+[2] Keras, https://github.com/XifengGuo/CapsNet-Keras. <br />
+[3] Zhou J., and Olga T. "Deep supervised and convolutional generative stochastic network for protein secondary structure prediction." International Conference on Machine Learning. 2014. <br />
 [4] Protein Data Bank, https://en.wikipedia.org/wiki/Protein_Data_Bank.<br />
-[5] Wetlaufer, Donald B. "Nucleation, rapid folding, and globular intrachain regions in proteins." Proceedings of the National Academy of Sciences70(3): 697-701, 1973.<br />
+[5] Wetlaufer Donald B. "Nucleation, rapid folding, and globular intrachain regions in proteins." Proceedings of the National Academy of Sciences70(3): 697-701, 1973.<br />
 [6] Swindells, Mark B. "A procedure for detecting structural domains in proteins." Protein Science, 4(1):103-112, 1995.
 [7] Orengo, Christine A., et al. "CATH–a hierarchic classification of protein domain structures." Structure 5.8:1093-1109, 1997.
