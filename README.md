@@ -48,22 +48,31 @@ Just like other neural networks program, the workflow is simple: training the pr
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/workflow_3.png)
 <br />
 - CNPDP : User can use protein structure image as input. Inside our program, we parsed the image files and trained the model. The output daata will be the predicted number of domains for the protein chain. 
-*** workflow
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/PDP.png)
+<br />
+
 - CNPDP 2.0 : User can use protein chain PDB ID as input. Inside our program, we searched the PDB ID from database, get the atom coordinates information and use these information generate input matrix. Finally, they can also get the predicted number of domains for the protein chain. 
-*** workflow
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/PDP2.png)
+<br />
 
 ## Method and Data
 The protein secondry structure datasets are collected from Protein Data Bank(PDB, https://www.rcsb.org/) which is established since 1970's. The PDB provides s standard representation of molecular structure datasets which are derived from X-ray crystallography, NMR spectroscopy, and increasingly, cryo-electron microscopy,which are sumbitted by scientists around the world.
 ### Training data
-- CNPSP: The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure.[3] The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model.  <br />
+- CNPSP: The original training data set is from CullPDB with 5600 PDB files. The PDB format file contains full structure information about the known structure protein which we get the structure from either X-ray method or NMR method. The set of PDB files were selected by Olga Troyanskaya's lab in Princeton University - the data set was used in training their Supervised Convolutional GSN model for protein secondary structure.[3] The similarity between any two protein sequence from the data set is less than 30%, which is a good property for training the protein structure prediction model. 
+
+The CullPDB dataset was constructed before CASP10 (i.e., May 2012), in which any two proteins in this set share around 20% sequence identity with each other(http://www.princeton.edu/~jzthree/datasets/ICML2014/). CB513 dataset contains 513 non-redauntant sequences which can be used to test protein secondary structure methods.Both CullPDB and CB513 can be benchmark datasets.
+
 - CNPDP: We generate the training data set malually from Pymol. We generated 32 protein structure images with labels as training data set. The label information is from CATH. 
+
+CATH can help group protein domains based on their folding patterns, the domains prediction ar downloaded from Protein Data Bank. It includes four levels of classes that ar chlassification,architecture (A), topology (T) and homologous superfamily (H)[7].
+
 - CNPDP 2.0: We get the atom coordinates from PDB file for each protein chain, training the model using xxx protein chain information with labels. The label information is from CATH. 
 ### Capsule networks
 The original Capsule networks code is from https://github.com/XifengGuo/CapsNet-Keras, which is a Keras implementation of CapsNet in the paper:
 Sara Sabour, Nicholas Frosst, Geoffrey E Hinton. Dynamic Routing Between Capsules. NIPS 2017
 We modified the code to do the protein secondary structure prediction. 
 ### Testing data
-- CNPSP: There are two sets of testing data: 514 PDB files from Cb513 and 272 PDB files from CullPDB. All PDB files were pre-proceed into the data format as training data. 
+- CNPSP: There are two sets of testing data: 513 PDB files from Cb513 and 272 PDB files from CullPDB. All PDB files were pre-proceed into the data format as training data. 
 - CNPDP: The testing data set is manually generated. We test oue model using 2 labeled images.  
 - CNPDP 2.0: The testing data set is manually generated. We test oue model using yyy labeled images. 
 ### Validation data
@@ -111,3 +120,4 @@ The expected output would be "1".
 [4] Protein Data Bank, https://en.wikipedia.org/wiki/Protein_Data_Bank.<br />
 [5] Wetlaufer, Donald B. "Nucleation, rapid folding, and globular intrachain regions in proteins." Proceedings of the National Academy of Sciences70(3): 697-701, 1973.<br />
 [6] Swindells, Mark B. "A procedure for detecting structural domains in proteins." Protein Science, 4(1):103-112, 1995.
+[7] Orengo, Christine A., et al. "CATH–a hierarchic classification of protein domain structures." Structure 5.8:1093-1109, 1997.
