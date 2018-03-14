@@ -21,7 +21,7 @@
 ### Capsule networks
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/CapsNet.png)
 <br />
-![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Capnetssss.png)
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/Capsule_333.png)
 <br />
 Capsule networks is a kind of new neural networks, which could improve the shortage of convolutional neural networks - orientation problem.
 ### Secondary structure prediction
