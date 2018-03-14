@@ -109,6 +109,8 @@ We modified the code to do the protein secondary structure prediction and domain
 ## Amazing result!!!!!!!
 ![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/result.png)
 <br />
+![alt text](https://github.com/NCBI-Hackathons/CapNetProtStruct/blob/master/image/result_2.png)
+<br />
 
 ## Team members
 
